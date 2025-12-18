@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Angle Converter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="converter-container">
+        <h1>Angle Converter</h1>
+
+        <div class="input-group">
+            <label for="inputValue">Value to Convert (Non-Negative):</label>
+            <input type="text" id="inputValue" placeholder="Enter angle value" pattern="[0-9]*" inputmode="decimal">
+        </div>
+
+        <div class="selection-group">
+            <div class="select-box">
+                <label for="fromUnit">From Unit:</label>
+                <select id="fromUnit">
+                    <option value="degrees">Degrees (°)</option>
+                    <option value="radians">Radians (rad)</option>
+                    <option value="gradians">Gradians (grad)</option>
+                </select>
+            </div>
+
+            <div class="select-box">
+                <label for="toUnit">To Unit:</label>
+                <select id="toUnit">
+                    <option value="radians">Radians (rad)</option>
+                    <option value="degrees">Degrees (°)</option>
+                    <option value="gradians">Gradians (grad)</option>
+                </select>
+            </div>
+        </div>
+        
+        <div class="result-group">
+            <label for="resultValue">Result:</label>
+            <p id="resultValue">0.00</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

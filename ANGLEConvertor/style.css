@@ -1,0 +1,77 @@
+body {
+    font-family: Arial, Helvetica, sans-serif; /* Basic font */
+    background-color: #eee; /* Simple light background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.converter-container {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #333; /* Basic solid border */
+    width: 100%;
+    max-width: 350px;
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 1.5em;
+    border-bottom: 2px solid #ccc; /* Simple separator */
+    padding-bottom: 10px;
+}
+
+.input-group, .selection-group, .result-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+    font-size: 0.9em;
+}
+
+#inputValue {
+    width: 95%;
+    padding: 8px;
+    border: 1px solid #666; /* Simple border */
+    font-size: 1em;
+}
+
+.selection-group {
+    display: flex;
+    justify-content: space-between;
+}
+
+.select-box {
+    width: 48%;
+}
+
+select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #666;
+    background-color: #f0f0f0; /* Simple background for dropdown */
+    font-size: 0.9em;
+    cursor: pointer;
+}
+
+.result-group {
+    text-align: center;
+    padding-top: 15px;
+    border-top: 1px dashed #999; /* Dashed line for a simpler look */
+}
+
+#resultValue {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #008000; /* Green for result */
+    margin: 5px 0 0;
+}
