@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Student Registration Portal</title>
+  <style>
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f6f9;
+      color: #333;
+    }
+
+    /* Header */
+    header {
+      background: #004080;
+      color: #fff;
+      padding: 15px 20px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 28px;
+    }
+
+    /* Banner */
+    .banner {
+      width: 100%;
+      height: 250px;
+      background: url("dummy-banner.jpg") center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 32px;
+      font-weight: bold;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+    }
+
+    /* Container */
+    .container {
+      max-width: 900px;
+      margin: -80px auto 30px;
+      background: #fff;
+      padding: 25px 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      position: relative;
+      z-index: 10;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #004080;
+    }
+
+    /* Form Styling */
+    form {
+      display: grid;
+      gap: 15px;
+    }
+    .form-group {
+      margin-bottom: 10px;
+    }
+    label {
+      font-weight: 600;
+      margin-bottom: 5px;
+      display: block;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 14px;
+    }
+    .radio-group, .checkbox-group {
+      display: flex;
+      gap: 15px;
+      margin-top: 5px;
+    }
+
+    /* Profile picture */
+    .profile-pic {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .profile-pic img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #004080;
+    }
+
+    /* Buttons */
+    .actions {
+      text-align: center;
+      margin-top: 15px;
+    }
+    button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 16px;
+      margin: 5px;
+      transition: 0.3s ease;
+    }
+    .submit-btn {
+      background: #28a745;
+      color: #fff;
+    }
+    .submit-btn:hover {
+      background: #218838;
+    }
+    .reset-btn {
+      background: #dc3545;
+      color: #fff;
+    }
+    .reset-btn:hover {
+      background: #c82333;
+    }
+
+    /* Footer */
+    footer {
+      background: #004080;
+      color: #fff;
+      text-align: center;
+      padding: 10px;
+      font-size: 14px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>University Registration Portal</h1>
+  </header>
+
+  <div class="banner">
+    <p>Welcome Computer Learners!</p>
+  </div>
+
+  <!-- Form Container -->
+  <div class="container">
+    <h2>Student Registration Form</h2>
+
+    <form>
+      <!-- Text Input -->
+      <div class="form-group">
+        <label for="fullname">Full Name *</label>
+        <input type="text" id="fullname" name="fullname" required pattern="^[A-Z][a-zA-Z\s]*$" title="Must start with an uppercase letter and contain only letters and space">
+      </div>
+
+      <!-- Email -->
+      <div class="form-group">
+        <label for="email">Email *</label>
+        <input type="email" id="email" name="email" placeholder="example@mail.com" required>
+      </div>
+
+      <!-- Password -->
+      <div class="form-group">
+        <label for="password">Password *</label>
+        <input type="password" id="password" name="password"
+          pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+          title="At least 8 chars, 1 uppercase, 1 lowercase, 1 number"
+          required>
+      </div>
+
+      <!-- Tel -->
+      <div class="form-group">
+        <label for="phone">Telephone *</label>
+        <input type="tel" id="phone" name="phone" pattern="[0-9]{11}" placeholder="09XXXXXXXXX" required>
+      </div>
+
+      <!-- Radio -->
+      <div class="form-group">
+        <label>Gender *</label>
+        <div class="radio-group">
+          <label><input type="radio" name="gender" value="Male" required> Male</label>
+          <label><input type="radio" name="gender" value="Female" required> Female</label>
+        </div>
+      </div>
+
+      <!-- Checkbox -->
+      <div class="form-group">
+        <label>Skills *</label>
+        <div class="checkbox-group">
+          <label><input type="checkbox" name="skills" value="HTML"> HTML</label>
+          <label><input type="checkbox" name="skills" value="CSS"> CSS</label>
+          <label><input type="checkbox" name="skills" value="JavaScript"> JavaScript</label>
+        </div>
+      </div>
+
+      <!-- Dropdown -->
+      <div class="form-group">
+        <label for="course">Course *</label>
+        <select id="course" name="course" required>
+          <option value="">-- Select Course --</option>
+          <option value="Computer Engineering">Computer Engineering</option>
+          <option value="IT">Information Technology</option>
+          <option value="CS">Computer Science</option>
+        </select>
+      </div>
+
+      <!-- Multiple Dropdown -->
+      <div class="form-group">
+        <label for="hobbies">Hobbies (Multiple Select)</label>
+        <select id="hobbies" name="hobbies" multiple size="3">
+          <option>Reading</option>
+          <option>Gaming</option>
+          <option>Sports</option>
+          <option>Music</option>
+          <option>Travel</option>
+        </select>
+      </div>
+
+      <!-- File Upload -->
+      <div class="form-group">
+        <label for="photo">Upload Profile Photo *</label>
+        <input type="file" id="photo" name="photo" accept="image/*" required>
+      </div>
+
+      <div class="form-group">
+        <label for="resume">Upload Resume *</label>
+        <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" required>
+      </div>
+
+      <!-- Number -->
+      <div class="form-group">
+        <label for="age">Age (18-60) *</label>
+        <input type="number" id="age" name="age" min="18" max="60" step="1" required>
+      </div>
+
+      <!-- Date -->
+      <div class="form-group">
+        <label for="dob">Date of Birth *</label>
+        <input type="date" id="dob" name="dob" required>
+      </div>
+
+      <!-- Time -->
+      <div class="form-group">
+        <label for="time">Preferred Interview Time</label>
+        <input type="time" id="time" name="time">
+      </div>
+
+      <!-- Range -->
+      <div class="form-group">
+        <label for="satisfaction">Satisfaction Level (1-10)</label>
+        <input type="range" id="satisfaction" name="satisfaction" min="1" max="10">
+      </div>
+
+      <!-- Textarea -->
+      <div class="form-group">
+        <label for="bio">Short Bio</label>
+        <textarea id="bio" name="bio" rows="3"></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="comments">Comments</label>
+        <textarea id="comments" name="comments" rows="3"></textarea>
+      </div>
+
+      <!-- Hidden Field -->
+      <input type="hidden" name="hiddenField" value="HiddenValue">
+
+      <!-- Buttons -->
+      <div class="actions">
+        <button type="submit" class="submit-btn">Submit</button>
+        <button type="reset" class="reset-btn">Reset</button>
+      </div>
+    </form>
+  </div>
+
+  <script>
+document.querySelector("form").addEventListener("submit", function(event) {
+  event.preventDefault(); 
+
+  if (this.checkValidity()) {
+    alert("Successfully saved!");
+    this.reset();
+  } else {
+    alert("Please fill out all required fields correctly.");
+  }
+});
+</script>
+
+
+</body>
+</html>
