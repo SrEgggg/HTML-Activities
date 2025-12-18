@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap 5 Grid Task</title>
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    
+    <style>
+        /* Basic styling for visualization */
+        .row div[class*="col"] {
+            padding: 10px;
+            /* Using Bootstrap's border-light for separation on light backgrounds */
+            border: 1px solid rgba(255, 255, 255, 0.5); 
+            text-align: center;
+            font-weight: bold;
+
+        }
+        .bg-light { 
+            border: 1px solid #dee2e6 !important; 
+            color: #212529 !important; 
+        }
+        .bg-warning, .bg-info { 
+            color: #212529 !important; 
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container-fluid my-5">
+        <h1 class="text-center text-danger mb-4">Task 1</h1>
+        
+        <div class="row">
+            <div class="col-2 bg-danger text-light">span 2</div>
+            <div class="col-1 bg-primary text-light">span 1</div>
+            <div class="col-2 bg-warning text-dark">span 2</div>
+            <div class="col-1 bg-success text-light">span 1</div>
+            <div class="col-2 bg-info text-dark">span 2</div>
+            <div class="col-1 bg-dark text-light">span 1</div>
+            <div class="col-3 bg-secondary text-light">span 3</div>
+        </div>
+        
+        <div class="row">
+            <div class="col-3 bg-light text-dark">span 3</div>
+            <div class="col-5 bg-primary text-light">span 5</div>
+            <div class="col-4 bg-secondary text-light">span 4</div>
+        </div>
+
+        <div class="row">
+            <div class="col-6 bg-info text-dark">span 6</div>
+            <div class="col-3 bg-warning text-dark">span 3</div>
+            <div class="col-3 bg-success text-light">span 3</div>
+        </div>
+
+        <div class="row">
+            <div class="col-12 bg-dark text-light">span 12</div>
+        </div>
+        
+        <div class="row">
+            <div class="col-6 bg-secondary text-light">span 6</div>
+            <div class="col-6 bg-danger text-light">span 6</div>
+        </div>
+
+        <div class="row">
+            <div class="col-5 bg-success text-light">span 5</div>
+            <div class="col-7 bg-warning text-dark">span 7</div>
+        </div>
+        
+    </div>
+
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
